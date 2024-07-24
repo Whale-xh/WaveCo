@@ -24,6 +24,7 @@
 #include <sys/poll.h>
 #include <errno.h>
 #include <stddef.h>
+#include <arpa/inet.h>
 
 
 #define _USE_UCONTEXT
@@ -107,7 +108,7 @@ typedef struct _wave_schedule
 #ifdef _USE_UCONTEXT
 	ucontext_t ctx;
 #else
-	corowave_cpu_ctx ctx;
+	wave_cpu_ctx ctx;
 #endif
 	void *stack;
 	size_t stack_size;
@@ -215,6 +216,7 @@ typedef struct _wave_coroutine_compute_sched
 } wave_coroutine_compute_sched;
 
 extern pthread_key_t global_sched_key;
+
 static inline wave_schedule *wave_coroutine_get_sched() { return (wave_schedule *)pthread_getspecific(global_sched_key); }
 
 static inline uint64_t wave_coroutine_diff_usecs(uint64_t t1, uint64_t t2) { return t2 - t1; }
