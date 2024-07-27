@@ -37,7 +37,7 @@
 #define WAVE_CO_MAX_STACKSIZE (128 * 1024)
 
 #define BIT(x) (1 << (x))
-#define CLEARBIT(X) ~(1 << (x))
+#define CLEARBIT(x) ~(1 << (x))
 #define CANCEL_FD_WAIT_UINT64 1
 
 typedef void (*proc_coroutine)(void *);
