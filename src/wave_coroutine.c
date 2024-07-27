@@ -179,7 +179,7 @@ void wave_coroutine_yield(wave_coroutine *co)
 #endif
 }
 
-int wave_coroutine_resum(wave_coroutine *co)
+int wave_coroutine_resume(wave_coroutine *co)
 {
     if (co->status & BIT(WAVE_COROUTINE_STATUS_NEW))
     {
