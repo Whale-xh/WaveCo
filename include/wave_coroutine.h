@@ -4,6 +4,7 @@
 #include "wave_queue.h"
 #include "wave_tree.h"
 
+#define __USE_GNU
 #define _GNU_SOURCE
 #include <dlfcn.h>
 
