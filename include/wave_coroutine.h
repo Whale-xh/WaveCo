@@ -153,7 +153,7 @@ typedef struct _wave_coroutine
 	int64_t fd_wait;
 #endif
 	char funcname[64];
-	struct _wavecoroutine *co_join;
+	struct _wave_coroutine *co_join;
 	void **co_exit_ptr;
 	void **stack;
 	void **ebp;
