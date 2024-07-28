@@ -36,7 +36,7 @@ static inline int wave_coroutine_wait_cmp(wave_coroutine *co1, wave_coroutine *c
 RB_GENERATE(_wave_coroutine_rbtree_sleep, _wave_coroutine, sleep_node, wave_coroutine_sleep_cmp);
 RB_GENERATE(_wave_coroutine_rbtree_wait, _wave_coroutine, wait_node, wave_coroutine_wait_cmp);
 
-void wave_coroutine_sched_sleepdown(wave_coroutine *co, uint64_t msecs)
+void wave_schedule_sched_sleepdown(wave_coroutine *co, uint64_t msecs)
 {
     uint64_t usecs = msecs * 1000u;
     wave_coroutine *co_tmp = RB_FIND(_wave_coroutine_rbtree_sleep, &co->sched->sleeping, co);
@@ -121,7 +121,7 @@ void wave_schedule_sched_wait(wave_coroutine *co, int fd, unsigned short events,
     assert(co_tmp == NULL);
     if (timeout == 1)
         return;
-    wave_coroutine_sched_sleepdown(co, timeout);
+    wave_schedule_sched_sleepdown(co, timeout);
 }
 
 void wave_schedule_cancel_wait(wave_coroutine *co)

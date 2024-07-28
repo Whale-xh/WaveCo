@@ -1,6 +1,6 @@
 
 #include "../include/wave_coroutine.h"
-#include <asm-generic/poll.h>
+
 
 static uint32_t wave_pollevent_2epoll(short events)
 {
