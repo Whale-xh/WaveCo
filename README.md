@@ -7,4 +7,4 @@ A coroutine library, synchronous programming, asynchronous efficiency
 
 make
 
-Add -lwaveco when linking
+Compile and link with -lwaveco
