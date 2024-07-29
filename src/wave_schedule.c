@@ -54,7 +54,7 @@ void wave_schedule_sched_sleepdown(wave_coroutine *co, uint64_t msecs)
             co->sleep_usecs++;
             continue;
         }
-        co->status != BIT(WAVE_COROUTINE_STATUS_SLEEPING);
+        co->status |= BIT(WAVE_COROUTINE_STATUS_SLEEPING);
         break;
     }
 }
