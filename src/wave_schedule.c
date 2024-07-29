@@ -99,7 +99,7 @@ void wave_schedule_sched_wait(wave_coroutine *co, int fd, unsigned short events,
 {
     if (co->status & BIT(WAVE_COROUTINE_STATUS_WAIT_READ) || co->status & BIT(WAVE_COROUTINE_STATUS_WAIT_WRITE))
     {
-        printf("Unexpected event. lt id %" PRIu64 " fd %" PRId32 " already in %" PRId32 " state\n", co->id, co->fd, co->status);
+        printf("Unexpected event. It id %" PRIu64 " fd %" PRId32 " already in %" PRId32 " state\n", co->id, co->fd, co->status);
         assert(0);
     }
     if (events & POLLIN)
