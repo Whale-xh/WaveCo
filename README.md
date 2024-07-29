@@ -3,4 +3,8 @@ A coroutine library, synchronous programming, asynchronous efficiency
 
 
 
-### Update will be completed soon...
+## Usage
+
+make
+
+Add -lwaveco when linking
