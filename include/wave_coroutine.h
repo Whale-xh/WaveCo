@@ -1,3 +1,28 @@
+
+/*
+ __          __              _____      
+ \ \        / /             / ____|     
+  \ \  /\  / /_ ___   _____| |     ___  
+   \ \/  \/ / _` \ \ / / _ \ |    / _ \ 
+    \  /\  / (_| |\ V /  __/ |___| (_) |
+     \/  \/ \__,_| \_/ \___|\_____\___/ 
+
+---------------------------------------------------------------------------------------
+   Author : Whale-xh , email : 1870211055@qq.com
+  
+   Copyright Statement:
+   --------------------
+   This software is protected by Copyright and the information contained
+   herein is confidential. The software may not be copied and the information
+   contained herein may not be used or disclosed except with the written
+   permission of Author. (C) 2024                                                                             
+
+
+*
+*/
+
+
+
 #ifndef __WAVE_COROUTINE_H__
 #define __WAVE_COROUTINE_H__
 
