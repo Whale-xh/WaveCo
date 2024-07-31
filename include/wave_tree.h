@@ -23,8 +23,8 @@
 
 
 
-#ifndef __COROW_TREE_H__
-#define __COROW_TREE_H__
+#ifndef __WAVE_TREE_H__
+#define __WAVE_TREE_H__
 
 #define SPLAY_HEAD(name, type)						\
 struct name {								\
