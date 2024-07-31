@@ -23,8 +23,8 @@
 
 
 
-#ifndef __COROW_QUEUE_H__
-#define __COROW_QUEUE_H__
+#ifndef __WAVE_QUEUE_H__
+#define __WAVE_QUEUE_H__
 
 #include <sys/cdefs.h>
 
