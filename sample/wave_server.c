@@ -29,7 +29,7 @@
 #define MAX_CLIENT_NUM 1000000
 #define TIME_SUB_MS(tv1, tv2) ((tv1.tv_sec - tv2.tv_sec) * 1000 + (tv1.tv_usec - tv2.tv_usec) / 1000)
 
-void server_reader(void *arg)
+void server_reader_sender(void *arg)
 {
 	int fd = *(int *)arg;
 	int ret = 0;
@@ -103,7 +103,7 @@ void server(void *arg)
 		// printf("new client comming\n");
 
 		wave_coroutine *read_co;
-		wave_coroutine_create(&read_co, server_reader, &cli_fd);
+		wave_coroutine_create(&read_co, server_reader_sender, &cli_fd);
 	}
 }
 
