@@ -100,7 +100,6 @@ void server(void *arg)
 
 			printf("client fd : %d, time_used: %d s\n", cli_fd, time_used / 1000);
 		}
-		// printf("new client comming\n");
 
 		wave_coroutine *read_co;
 		wave_coroutine_create(&read_co, server_reader_sender, &cli_fd);
